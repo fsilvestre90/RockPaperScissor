@@ -61,5 +61,19 @@
         function getWeapon() {
             return $this->weapon;
         }
+
+        //Saver
+              //Stores Player info
+            function save(){
+                array_push($_SESSION['players'], $this);
+            }
+            //Get all
+            static function getPlayers(){
+                return $_SESSION['players'];
+            }
+            //Delete all
+            static function resetPlayers(){
+                $_SESSION['players'] = array();
+            }
     }
 ?>
