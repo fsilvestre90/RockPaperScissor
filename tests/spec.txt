@@ -1,8 +1,8 @@
 ---------Test 0.5--------------
-WHAT IT DOES:Takes user data and matches it to game data
+WHAT IT DOES:Takes user data and matches it to game  choice
 
-        INPUT: user1:rock user2:paper
-        output: user1 = [1,2] user2 = [2,3ßß]
+        INPUT: user1:0 user2:1
+        output: user1 = [1,2,'rock'] user2 = [2,3,'paper']
 
 
 ----------Test 1---------------
@@ -16,7 +16,14 @@ WHAT IT DOES: Checks to see if user 1 and
 WHAT IT DOES: Check to see if user1 has rock and user2 has scissors
 
         INPUT: user1:rock user2:scissors
-        OUTPUT: user1 wins
+        OUTPUT: PLAYER1 WINS!
+
+--------Test 2.5------------------
+WHAT IT DOES: Check to see if user2 has rock and user1 has scissors
+
+        INPUT: user1: Rock user2: Scissors
+        OUTPUT: PLAYER2 WINS!
+
 
 ---------Test 3------------------
 WHAT IT DOES: Checks to see if user1 defeats user2
