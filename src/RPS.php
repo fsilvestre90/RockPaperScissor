@@ -10,7 +10,7 @@
 
             // If Playrer1 and Player2 are the same output draw
 
-            if($player1->getWeapon() === $player2->getWeapon()){
+            if ($player1->getWeapon() === $player2->getWeapon()) {
                 return "DRAW!";
             }
             //When Player one chooses rock and player two chooses scissors we
@@ -33,7 +33,7 @@
 
                     return "Player 1 wins";
             }
-            else{
+            else {
                     return "Player 2 wins";
             }
 
@@ -44,8 +44,10 @@
     class Player
     {
         public $weapon;
+        public $player_input;
 
         public function __construct($player_input) {
+            $this->player_input = $player_input;
             $this->setWeapon($player_input);
         }
 
@@ -62,18 +64,21 @@
             return $this->weapon;
         }
 
-        //Saver
-              //Stores Player info
-            function save(){
-                array_push($_SESSION['players'], $this);
-            }
-            //Get all
-            static function getPlayers(){
-                return $_SESSION['players'];
-            }
-            //Delete all
-            static function resetPlayers(){
-                $_SESSION['players'] = array();
-            }
+        function getPlayerInput() {
+            return $this->player_input;
+        }
+
+        //Stores Player info
+        function save(){
+            array_push($_SESSION['players'], (int) $this->player_input);
+        }
+        //Get all
+        static function getPlayerInformation(){
+            return $_SESSION['players'][0];
+        }
+        //Delete all
+        static function resetPlayerInformation(){
+            $_SESSION['players'] = array();
+        }
     }
 ?>

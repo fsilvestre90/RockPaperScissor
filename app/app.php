@@ -25,17 +25,18 @@
         });
 
         $app->post('/player2_choice', function() use ($app) {
-            array_push($_SESSION['players'], (int)$_POST['player1_input']);
+            $player1 = new Player($_POST['player1_input']);
+            $player1->save();
 
             return $app['twig']->render('player_2.html.twig');
         });
 
         $app->post('/game_results', function() use ($app) {
             $game = new RPS;
-            $player1_choice = $_SESSION['players'];
-            $game->RPS_game($player1_choice[0], $_POST['player2_input']);
-var_dump($player1_choice);
-            return $app['twig']->render('game.html.twig', array('result' => $game));
+            $player1_input = Player::getPlayerInformation();
+            $outcome = $game->RPS_game($player1_input, $_POST['player2_input']);
+            Player::resetPlayerInformation();
+            return $app['twig']->render('game_results.html.twig', array('result' => $outcome));
         });
 
 
