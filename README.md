@@ -1,12 +1,12 @@
-# _{Application Name}_
+# Rock Paper Scissors
 
-##### _{Brief description of application}, {Date of current version}_
+##### Simple rock paper scissors game, Last Updated: August 12, 2015
 
-#### By Filipe Silvestre
+#### By Filipe Silvestre, Alex Costa
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. Do you want other developers to use this code in their apps? Talk about things like that here in simple terms.}_
+This is a simple rock, paper, scissors game that you can settle bets with.
 
 ## Setup
 
@@ -20,7 +20,7 @@ Front-End: Bootstrap framework with HTML5, CSS
 
 ### Legal
 
-Copyright (c) 2015 Filipe Silvestre
+Copyright (c) 2015 Filipe Silvestre, Alex Costa
 
 This software is licensed under the MIT license.
 
