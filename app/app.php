@@ -10,7 +10,6 @@
         $_SESSION['players'] = array();
     }
 
-
     // INITIALIZE APPLICATION
         $app = new Silex\Application();
         $app->register(new Silex\Provider\TwigServiceProvider(), array(
@@ -36,6 +35,7 @@
             $player1_input = Player::getPlayerInformation();
             $outcome = $game->RPS_game($player1_input, $_POST['player2_input']);
             Player::resetPlayerInformation();
+            
             return $app['twig']->render('game_results.html.twig', array('result' => $outcome));
         });
 
