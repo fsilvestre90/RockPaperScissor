@@ -2,17 +2,32 @@
 <html>
 <head>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
-    <title>Index</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <title>ROCK! PAPER! SCISSORS!</title>
 </head>
 <body>
+    <div class="jumbotron vertical-center">
+        <div class="container">
+            <div class="row">
+                <h1>Rock Paper Scissors!</h1>
+            </div>
+        </div>
+    </div>
     <div class='container'>
-        <h1>Rock Paper Scissors!</h1>
-        <h2>Ready Player 1</h2>
-        <form action="/player2_choice" method="post">
-            <button name="player1_input" value="0" type ="submit">Rock</button>
-            <button name="player1_input" value="1" type ="submit">Paper</button>
-            <button name="player1_input" value="2" type ="submit">Scissors</button>
-        </form>
+        <div class="row">
+            <h2>Ready Player 1</h2>
+            <form action="/player2_choice" method="post">
+                <button class="btn btn-lg btn-danger btn-block" name="player1_input" value="0" type ="submit">
+                    <span class="fa fa-hand-rock-o fa-5x"></span>
+                </button>
+                <button class="btn btn-lg btn-danger btn-block" name="player1_input" value="1" type ="submit">
+                    <span class="fa fa-hand-paper-o fa-5x"></span>
+                </button>
+                <button class="btn btn-lg btn-danger btn-block" name="player1_input" value="2" type ="submit">
+                    <span class="fa fa-hand-scissors-o fa-5x"></span>
+                </button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
